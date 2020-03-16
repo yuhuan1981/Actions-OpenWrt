@@ -24,19 +24,19 @@ sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\
 #rm -rf package/network/config/firewall/files/firewall.config
 #cp -f ../firewall.config package/network/config/firewall/files/
 
-#添加wifi
-mkdir -p files/etc/config
-cp -f ../wireless files/etc/config/
+# 添加wifi
+# mkdir -p files/etc/config
+# cp -f ../wireless files/etc/config/
 
 #修改机器名称
 sed -i 's/OpenWrt/RaspberryPi4/g' package/base-files/files/bin/config_generate
 
-#替换banner
+# 替换banner
 rm -rf package/base-files/files/etc/banner
 cp -f ../banner package/base-files/files/etc/
 
 #添加nfs
-cp -rf ../luci-app-nfs package/lean/
+# cp -rf ../luci-app-nfs package/lean/
 
 # Change timezone
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
