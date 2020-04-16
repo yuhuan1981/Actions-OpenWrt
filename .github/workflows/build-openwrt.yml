@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: .config
   DIY_SH: diy.sh
-  SSH_ACTIONS: false
+  SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
@@ -75,6 +75,7 @@ jobs:
         rm -rf package/lean/luci-app-pppoe-relay
         rm -rf package/lean/luci-app-pptp-server
         rm -rf package/lean/luci-app-v2ray-server
+        rm -rf package/lean/luci-app-ssr-plus
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
