@@ -70,7 +70,6 @@ jobs:
         rm -rf feeds/lienol/lienol/pdnsd-alt
         rm -rf feeds/lienol/package/verysync
         rm -rf feeds/lienol/lienol/luci-app-verysync
-        cp -r package/lean/kcptun feeds/helloworld/
         rm -rf package/lean/kcptun 
         rm -rf package/lean/luci-app-kodexplorer
         rm -rf package/lean/luci-app-pppoe-relay
