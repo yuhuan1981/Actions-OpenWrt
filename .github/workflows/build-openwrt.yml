@@ -59,6 +59,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         sed -i '$a\src-git lienol https:\/\/github.com\/Lienol\/openwrt-package' feeds.conf.default
+        sed -i '$a\src-git helloworld https:\/\/github.com\/fw876\/helloworld' feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/lienol/v2ray
         rm -rf feeds/lienol/lienol/openssl1.1
