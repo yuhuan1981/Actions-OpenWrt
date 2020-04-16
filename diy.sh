@@ -14,7 +14,6 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci
 git clone https://github.com/sypopo/luci-theme-argon-mc.git package/luci-theme-argon-mc
 mkdir -p package/lean/smartdns && wget -P package/lean/smartdns https://raw.githubusercontent.com/openwrt/packages/master/net/smartdns/Makefile
 git clone https://github.com/Apocalypsor/luci-app-smartdns.git package/lean/luci-app-smartdns
-cp package/lean/kcptun feeds/helloworld
 
 #修复核心及添加温度显示
 sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
