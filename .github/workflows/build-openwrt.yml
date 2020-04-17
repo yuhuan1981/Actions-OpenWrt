@@ -76,6 +76,7 @@ jobs:
         rm -rf package/lean/luci-app-pptp-server
         rm -rf package/lean/luci-app-v2ray-server
         rm -rf package/lean/luci-app-ssr-plus
+        rm -rf package/helloworld/luci-app-ssr-plus
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
