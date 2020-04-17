@@ -58,7 +58,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/\"#src-git\"/\"src-git\"/g' feeds.conf.default
+        sed -i '5s/#src-git/src-git/g' feeds.conf.default
         sed -i '$a\src-git lienol https:\/\/github.com\/Lienol\/openwrt-package' feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/lienol/v2ray
